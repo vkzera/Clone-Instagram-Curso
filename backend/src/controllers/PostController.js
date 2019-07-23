@@ -20,6 +20,7 @@ module.exports = {
             .resize(500)
             .jpeg({ quality: 70 })
             .toFile(path.resolve(req.file.destination, 'resized', fileName))
+            
 
         fs.unlinkSync(req.file.path);
 
